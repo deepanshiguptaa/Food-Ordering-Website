@@ -3,7 +3,6 @@ import {NavLink, useNavigate} from "react-router-dom";
 import { GrCart } from "react-icons/gr";
 import { HashLink } from 'react-router-hash-link'
 import { StoreContext } from '../context/StoreContext';
-import { assets } from '../assets/assets';
 import { IoPersonSharp } from "react-icons/io5";
 import { PiPackageLight } from "react-icons/pi";
 import { IoIosLogOut } from "react-icons/io";
@@ -34,7 +33,7 @@ const Navbar = ({setShowLogin}) => {
                 <HashLink className="nav-link active" aria-current="page" to="/">Home</HashLink>
                 </li>
                 <li className="nav-item">
-                <HashLink className="nav-link active" aria-current="page" to="#ourMenu">Menu</HashLink>
+                <HashLink className="nav-link active" aria-current="page" to="/menu">Menu</HashLink>
                 </li>
                 <li className="nav-item">
                 <HashLink className="nav-link active" aria-current="page" to="#chefs">Chef</HashLink>

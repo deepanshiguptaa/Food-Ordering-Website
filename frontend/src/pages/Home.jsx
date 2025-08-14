@@ -15,7 +15,6 @@ const Home = () => {
         <Header/>
         <About/>
         <OurMenu category={category} setCategory={setCategory}/>
-        <FoodDisplay category={category} />
         <Chefs/>
         <Gallery/>
         <Testimonials/>
