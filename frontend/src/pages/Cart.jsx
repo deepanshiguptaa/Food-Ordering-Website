@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
 import { IoRemoveCircle } from "react-icons/io5";
 import { IoMdAddCircle } from "react-icons/io";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { LuIndianRupee } from "react-icons/lu";
 
 const Cart = () => {
@@ -49,7 +49,9 @@ const Cart = () => {
         <p className='fw-bold'> Amount: <LuIndianRupee/> {getTotalCartAmount()}</p>
         <div className='mt-3'>
           <button onClick={()=> navigate('order')} className='btn btn-danger'>Proceed to Checkout</button>
-
+          <Link to="/cart/order" className="btn btn-success">
+            Place Order
+          </Link>
         </div>
       </div>
 

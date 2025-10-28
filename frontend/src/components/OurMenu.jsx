@@ -1,6 +1,7 @@
 import React from 'react'
 import {menu_list} from '../assets/assets.jsx'
 import { Navigate } from 'react-router-dom'
+import FoodDisplay from './FoodDisplay.jsx'
 
 const OurMenu = ({category,setCategory}) => {
   return (
@@ -20,13 +21,14 @@ const OurMenu = ({category,setCategory}) => {
                 })
             }
         </div>
-        {/* <div className='d-flex justify-content-center my-3'>
-            <button onClick={()=>setCategory("All")} className='btn btn-success show_all'>Show All</button>
-        </div> */}
-
         <div className='d-flex justify-content-center my-3'>
-            <button onClick={()=>Navigate('/menu')} className='btn btn-success show_all'>View More </button>
+            <button onClick={()=>setCategory("All")} className='btn btn-success show_all'>Show All</button>
         </div>
+        <FoodDisplay category={category}/>
+        
+        {/* <div className='d-flex justify-content-center my-3'>
+            <button onClick={()=>Navigate('/menu')} className='btn btn-success show_all'>View More </button>
+        </div> */}
          
     </div>
   )
