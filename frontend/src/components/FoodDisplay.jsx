@@ -5,7 +5,7 @@ import FoodItem from './FoodItem';
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
 
-  if (food_list.length === 0) {
+  if (!food_list || food_list.length === 0) {
     return <div className="text-center mt-5">Loading food items...</div>;
   }
 

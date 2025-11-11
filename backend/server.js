@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
+import dotenv from "dotenv";
 import connectDB from './config/mongodb.js'
 import foodRouter from './routes/foodRoutes.js'
 import userRouter from './routes/userRoute.js'
@@ -12,9 +13,10 @@ import Stripe from "stripe";
 const app = express()
 
 app.use(cors({
-  origin: ['http://localhost:5175'],
+  origin:  ["http://localhost:5173", "http://localhost:5174"],  // Vite frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
-}));
+}));    
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -56,7 +58,7 @@ app.use('/api/contact',contactRoute)
 
 const port = process.env.PORT || 5000
 
-
+dotenv.config();
 connectDB() 
 
 
